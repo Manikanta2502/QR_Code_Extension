@@ -38,4 +38,16 @@ Done! You’ll see the QR Code icon in the extensions bar.
 ---
 
 ## 📁 Project Structure
+QR_Code_Extension/
+├── manifest.json # Chrome extension metadata
+
+├── popup.html # UI for the popup
+
+├── popup.js # JS logic for QR generation
+
+├── qrious.min.js # QRious library (QR generator)
+
+├── style.css # Minimal modern styling
+
+└── icons/ # Icon files (optional)
 
