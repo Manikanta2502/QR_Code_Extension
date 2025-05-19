@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>QR Code Generator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h2>QR Code</h2>
-  <canvas id="qr"></canvas>
-  <p id="url"></p>
-  <button id="copyBtn" title="Copy URL">Copy URL</button>
-  <button id="saveBtn" title="Download QR Code">Save QR</button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dist/output.css" rel="stylesheet">
 
+  </head>
+  <body>
+    <div class="w-full max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5">
+      <h2 class="text-xl font-semibold text-center text-slate-700 mb-4">QR Code</h2>
 
-  <!-- Load local QRious script first -->
-  <script src="qrious.min.js"></script>
-  <script src="popup.js"></script>
-</body>
+      <div class="flex justify-center mb-4">
+        <canvas
+          id="qr"
+          class="bg-white rounded-xl p-2 shadow-md w-44 h-44"
+        ></canvas>
+      </div>
+
+      <p
+        id="url"
+        class="text-xs font-mono text-slate-600 bg-slate-100 rounded-md px-3 py-2 text-center break-words mb-4 shadow-inner"
+      ></p>
+
+      <div class="flex justify-center gap-2">
+        <button
+          id="copyBtn"
+          title="Copy URL"
+          class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors duration-200"
+        >
+          Copy URL
+        </button>
+        <button
+          id="saveBtn"
+          title="Download QR Code"
+          class="bg-green-600 text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-colors duration-200"
+        >
+          Save QR
+        </button>
+      </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="qrious.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
 </html>
